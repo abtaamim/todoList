@@ -1,0 +1,240 @@
+body {
+  font-family: cursive;
+  background-color: #badff5;
+  font-style: oblique;
+}
+
+.container {
+
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: rgba(164, 230, 237, 0.929);
+  border-radius: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-color: #0056b3;
+  border-width: 12px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+input[type="text"] {
+  flex-grow: 3; /* Increase the growth factor to make the text field larger */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-right: 10px;
+  font-size: 16px;
+  text-wrap: break-word;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+
+.buttons {
+  display: flex;
+  color: black;
+}
+
+button {
+  padding: 8px 15px; /* Reduce padding to make the button smaller */
+  background-color: #c1c5c9;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px; /* Decrease font size */
+}
+
+/* button:hover {
+  background-color: #b34500;
+} */
+
+
+.link-button {
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  text-decoration: underline;
+  color: #000000;
+  padding: 0px 10px;
+}
+
+.edit-button {
+  color: rgb(65, 25, 7);
+  background-color: transparent;
+
+}
+.edit-button::after{
+  color: #333;
+}
+.edit-button:hover{
+  color: #000000;
+  background-color: rgba(0, 252, 168, 0.233);
+}
+.input-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+
+.delete-button {
+  color: rgb(255, 0, 0);
+  background-color: transparent;
+  font-size: 25px;
+
+}
+
+.delete-button:hover{
+  /* color: rgba(255, 0, 0, 0.509); */
+  color: rgb(250, 6, 6);
+  background-color: #333;
+}
+
+ul {
+  
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+}
+
+li {
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  flex-wrap: wrap;
+ 
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+.completed {
+
+  text-decoration: line-through;
+  color: rgb(23, 4, 3);
+
+}
+
+#completedTasks {
+  margin-top: 20px;
+}
+
+#completedTasks summary {
+  cursor: pointer;
+}
+
+#completedTasks ul {
+  background-color: #d25e5e;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#completedTasks li {
+  color: #e7e7e7;
+  background-color: #dd7c7c;
+}
+
+.button-container {
+  /* width: 30%;
+  height: 200; */
+  padding: auto;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 10px;
+  margin-left: 250px;
+  border-radius: 100px;
+}
+
+#clearAll {
+  width: 70%;
+  margin-top: 10px;
+  margin-left: 100px;
+  background-color: #6887a5;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px; /* Consistent font size */
+  padding: 8px 15px; /* Consistent padding */
+}
+
+#clearAll:hover {
+  background-color: #340303;
+}
+
+textarea {
+  flex-grow: 3;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-right: 10px;
+  font-size: 16px;
+  resize: none; /* Allow vertical resizing */
+  height: 50px; /* Set an initial height */
+  box-sizing: border-box;
+}
+
+li .todo-text {
+  display: table;
+  flex-grow: 1;
+  margin-right: 100px; /* Add some space between the text and the buttons */
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  overflow: break-word;
+  word-break:break-all;
+}
+#todoList li {
+  color: rgb(10, 0, 0); /* Change text color for to-do list items */
+}
+#completedList li {
+  background-color: rgba(244, 179, 179, 0.964);
+  color: rgb(251, 84, 7); /* Change text color for completed list items */
+}
+
+
+#todoList li:nth-child(odd) {
+  background-color: #d3f0f1; /* Light grey */
+}
+
+#todoList li:nth-child(even) {
+  background-color: #c5e6eb; /* Slightly darker grey */
+}
+
+li .buttons {
+  
+  display: flex;
+  gap: 100px;
+  flex-shrink: 10;
+  align-self: flex-start;
+}
+
+
+.text-row {
+  display: flex;
+  flex-grow: 1;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  margin-bottom: 10px;
+}
+
+.buttons-row {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+}
