@@ -16,9 +16,17 @@ body {
   border-width: 12px;
 }
 
-h1 {
+  
+
+h1 {background-color: #8B0000;
+  /* color: #FFF; */
+  padding: 20px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  box-shadow: 0 5px 5px -5px #333;
+
   text-align: center;
-  color: #333;
+  color: #ffffff;
 }
 
 input[type="text"] {
@@ -37,6 +45,15 @@ input[type="text"] {
 .buttons {
   display: flex;
   color: black;
+}
+.addtodobtn{
+  color: #f3d1d1;
+  background-color: #2f553c;
+}
+.addtodobtn:hover{
+  text-decoration: wavy;
+  color: #fbbfbf;
+  background-color: #032823;
 }
 
 button {
@@ -139,15 +156,15 @@ li:last-child {
 }
 
 #completedTasks ul {
-  background-color: #d25e5e;
+  background-color: #a97d7d;
   padding: 10px;
   border-radius: 5px;
 }
 
-#completedTasks li {
-  color: #e7e7e7;
-  background-color: #dd7c7c;
-}
+/* #completedTasks li {
+  color: #281e1e;
+  background-color: #574d4d;
+} */
 
 .button-container {
   /* width: 30%;
@@ -202,7 +219,7 @@ li .todo-text {
   color: rgb(10, 0, 0); /* Change text color for to-do list items */
 }
 #completedList li {
-  background-color: rgba(244, 179, 179, 0.964);
+  background-color: rgba(228, 192, 192, 0.964);
   color: rgb(251, 84, 7); /* Change text color for completed list items */
 }
 

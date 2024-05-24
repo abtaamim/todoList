@@ -113,16 +113,18 @@ function clearAll(){
 function toggleTodo() {
   const li = this.parentElement.parentElement;
   const span = li.querySelector('span');
+  const but =li.querySelector('buttonsDiv');
   if (this.checked) {
     const confirmRemoval = confirm("This task is completed. Do you want to move it to the completed tasks list?");
     if (confirmRemoval) {
       span.classList.add('completed');
       this.checked=true;
       todoList.removeChild(li);  
-
-     // li.removeChild(buttonsDiv);
+    //  li.removeChild(but);
+    li.removeChild(this.parentElement);
+      //li.removeChild(buttonsDiv);
       completedList.appendChild(li);
-      
+      //completedList.li.removeChild(but);
       this.disabled = true;
       console.log("Task moved to completed list:", span.textContent);
     } else {
