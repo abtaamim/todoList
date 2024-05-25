@@ -113,18 +113,19 @@ button {
 }
 
 ul {
-  
+
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   list-style-type: none;
   padding: 0;
   width: 100%;
+  border-radius: 18px;
 }
 
 li {
   padding: 10px;
-  background-color: #f9f9f9;
+
   border-bottom: 1px solid #ddd;
   display: flex;
 
@@ -142,8 +143,8 @@ li:last-child {
 
 .completed {
 
-  text-decoration: line-through;
-  color: rgb(23, 4, 3);
+  color: rgb(227, 26, 12);
+ 
 
 }
 
@@ -155,30 +156,53 @@ li:last-child {
   cursor: pointer;
 }
 
-#completedTasks ul {
-  background-color: #a97d7d;
+/* #completedTasks ul {
+  background-color: #a81a1a;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 15px;
+} */
+
+ #completedTasks li {
+  color: #281e1e;
+  background-color: rgba(19, 21, 78, 0.961);
+  border-radius: 10px;
+} 
+
+#completedTasks li:nth-child(odd){
+  background-color: rgba(19, 21, 78, 0.961);
+  color: rgb(251, 84, 7); /* Change text color for completed list items */
+  display: flex;
+  height: 50px;
+  text-align: center;
+  text-align: start;
+
 }
 
-/* #completedTasks li {
-  color: #281e1e;
-  background-color: #574d4d;
-} */
+#completedTasks li:nth-child(even){
+  background-color: rgba(36, 30, 97, 0.964);
+  color: rgb(214, 214, 214); /* Change text color for completed list items */
+  display: flex;
+  height: 50px;
+  text-align: center;
+  text-align: start;
+
+}
+
 
 .button-container {
   /* width: 30%;
   height: 200; */
   padding: auto;
-  display: flex;
+  /* display: flex; */
   justify-content: flex-start;
   margin-top: 10px;
-  margin-left: 250px;
+  margin-left: 300px;
+  margin-right: 100px;
   border-radius: 100px;
 }
 
 #clearAll {
-  width: 70%;
+  width: 100%;
   margin-top: 10px;
   margin-left: 100px;
   background-color: #6887a5;
@@ -218,10 +242,7 @@ li .todo-text {
 #todoList li {
   color: rgb(10, 0, 0); /* Change text color for to-do list items */
 }
-#completedList li {
-  background-color: rgba(228, 192, 192, 0.964);
-  color: rgb(251, 84, 7); /* Change text color for completed list items */
-}
+
 
 
 #todoList li:nth-child(odd) {
@@ -240,18 +261,3 @@ li .buttons {
   align-self: flex-start;
 }
 
-
-.text-row {
-  display: flex;
-  flex-grow: 1;
-  word-wrap: break-word;
-  white-space: pre-wrap;
-  overflow-wrap: break-word;
-  margin-bottom: 10px;
-}
-
-.buttons-row {
-  display: flex;
-  justify-content: flex-start;
-  gap: 10px;
-}

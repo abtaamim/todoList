@@ -1,7 +1,7 @@
 const todoInput = document.getElementById("todoInput");
 const addTodoBtn = document.getElementById("addTodoBtn");
 const todoList = document.getElementById("todoList");
-const completedList = document.getElementById("completedList");
+const completedTasks = document.getElementById("completedTasks");
 const clearAllBtn= document.getElementById('clearAll');
 addTodoBtn.addEventListener("click", addTodo);
 clearAllBtn.addEventListener('click', clearAll);
@@ -17,9 +17,6 @@ function addTodo() {
     const span = document.createElement("span");
     span.textContent = todoText;
     span.classList.add('todo-text');
-
-   // textDiv.classList.add("text-row");
-   // buttonsDiv.classList.add("buttons-row");
 
     ed_del_but(buttonsDiv);
 
@@ -86,7 +83,7 @@ function editTodo() {
   }
 
   // Event listener to save the edit when Enter is pressed or input loses focus
-  input.addEventListener('blur', saveEdit);
+  //input.addEventListener('blur', saveEdit);
   input.addEventListener('keydown', function(event) {
       if (event.key === 'Enter') {
           saveEdit();
@@ -123,12 +120,25 @@ function toggleTodo() {
     //  li.removeChild(but);
     li.removeChild(this.parentElement);
       //li.removeChild(buttonsDiv);
-      completedList.appendChild(li);
+
+      const deleteButton = document.createElement('button');
+  deleteButton.classList.add('delete-button');
+  deleteButton.type = 'delete';
+  deleteButton.innerHTML = '&#128465;';
+  deleteButton.addEventListener('click', deleteComp);
+  li.appendChild(deleteButton);
+        completedTasks.appendChild(li);
+
       //completedList.li.removeChild(but);
       this.disabled = true;
       console.log("Task moved to completed list:", span.textContent);
     } else {
       this.checked = false;
     }
+  }
+  function deleteComp() {
+    const confirmRemoval = confirm(" Do you want to remove this from the todo list?");
+    if(confirmRemoval)
+      this.parentElement.remove();
   }
 }
